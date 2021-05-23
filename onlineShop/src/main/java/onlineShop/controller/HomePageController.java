@@ -27,16 +27,17 @@ public class HomePageController {
 	}
 
 	@RequestMapping("/login")
-	public String login(@RequestParam(value = "error", required = false) String error,
-	@RequestParam(value = "logout", required = false) String logout, Model model) {
+	public String login(Model model,@RequestParam(value = "error", required = false) String error) {
 		if (error != null) {
 			model.addAttribute("error", "Invalid username and Password");
 		}
-
-		if (logout != null) {
+		return "login";
+	}
+	
+	@RequestMapping("/logout")
+	public String logout(Model model) {	
 			model.addAttribute("login", "You have logged out successfully");
-		}
-		return "redirect:/getAllProducts";
+		return "login";
 	}
 
 	@GetMapping("/aboutus")
@@ -48,5 +49,6 @@ public class HomePageController {
 	public String sayContact() {
 		return "contactUs";
 	}
+		
 }
 

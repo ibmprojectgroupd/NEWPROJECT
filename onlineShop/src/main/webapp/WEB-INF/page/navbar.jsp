@@ -17,8 +17,7 @@
 	<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar">
-			<img src="<c:url value="/resource/images/logo.png"/>" width="210px"
-				height="130px" alt="logo-image" />
+			<img src="<c:url value="/resource/images/logo.png"/>" width="210px" height="130px" alt="logo-image" />
 		</div>
 
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -27,20 +26,19 @@
 				<li><a href=" <c:url value="/aboutus" />">About Us</a></li>
 				<li><a href=" <c:url value="/contactus" />">Contact Us</a></li>
 				<security:authorize access="hasRole('ROLE_ADMIN')">
-					<li><a href=" <c:url value="/admin/product/addProduct" />">Add
-							Product</a></li>
+					<li><a href=" <c:url value="/admin/product/addProduct" />">Add Product</a></li>
 				</security:authorize>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
 
 				<c:if test="${!empty pageContext.request.userPrincipal.name}">
-					<li><a href="<c:url value="/index" />"><span
-							class="glyphicon glyphicon-shopping-user"></span>Welcome ${pageContext.request.userPrincipal.name} </a></li>
+					<li><a href="<c:url value="/index" />"><span class="glyphicon glyphicon-shopping-user"></span>Welcome ${pageContext.request.userPrincipal.name} </a></li>
 
 					<security:authorize access="hasRole('ROLE_USER')">
 						<li><a href="<c:url value="/cart/getCartById" />"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 					</security:authorize>
+					<li><a href="<c:url value="/logout" />"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 				</c:if>
 			</ul>
 
