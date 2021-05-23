@@ -24,13 +24,7 @@
 				<c:url value="/admin/product/addProduct" var="url"></c:url>
 				<form:form method="post" action="${url}" modelAttribute="productForm" enctype="multipart/form-data">
 					<div class="col-sm-12">
-						<div class="row">
-							
-							<div class="col-sm-6 form-group">
-								<form:label path="id">Product Id</form:label>
-								<form:input type="text" placeholder="Enter ProductId" class="form-control" path="id" disabled="true"></form:input>
-							</div>
-							
+						<div class="row">	
 							<div class="col-sm-6 form-group">
 								<form:label path="productName">Product Name</form:label>
 								 <form:input type="text" placeholder="Enter Product Name" class="form-control" path="productName"></form:input>
@@ -47,6 +41,8 @@
 						<form:label path="productCategory">Product Category</form:label>
 								 <form:radiobutton path="productCategory" value="Android"/>Android
 								 <form:radiobutton path="productCategory" value="Mac"/> IOS
+								 <form:radiobutton path="productCategory" value="Laptop" />Laptop
+								<form:radiobutton path="productCategory" value="Others" />Others
 						</div>
 						
 						<div class="row">

@@ -48,23 +48,23 @@
 							Android
 							<form:radiobutton path="productCategory" value="Mac" />
 							IOS
+							<form:radiobutton path="productCategory" value="Laptop" />
+							Laptop
+							<form:radiobutton path="productCategory" value="Others" />
+							Others
 						</div>
 						<div class="row">
 							<div class="col-sm-4 form-group">
 								<form:label path="productManufacturer">Product Manufacturer</form:label>
-								<form:input type="text"
-									placeholder="Enter Product Manufacurer" class="form-control"
-									path="productManufacturer"></form:input>
+								<form:input type="text" placeholder="Enter Product Manufacurer" class="form-control" path="productManufacturer"></form:input>
 							</div>
 							<div class="col-sm-4 form-group">
 								<form:label path="productPrice">Product Price</form:label>
-								<form:input type="text" placeholder="Enter Product Price"
-									class="form-control" path="productPrice"></form:input>
+								<form:input type="text" placeholder="Enter Product Price" class="form-control" path="productPrice"></form:input>
 							</div>
 							<div class="col-sm-4 form-group">
 								<form:label path="unitStock">Number of Products</form:label>
-								<form:input type="text" placeholder="Number of Products"
-									class="form-control" path="unitStock"></form:input>
+								<form:input type="text" placeholder="Number of Products" class="form-control" path="unitStock"></form:input>
 							</div>
 						</div>
 						<div class="form-actions">

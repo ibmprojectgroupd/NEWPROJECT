@@ -34,9 +34,9 @@ public class HomePageController {
 		}
 
 		if (logout != null) {
-			model.addAttribute("logout", "You have logged out successfully");
+			model.addAttribute("login", "You have logged out successfully");
 		}
-		return "login";
+		return "redirect:/getAllProducts";
 	}
 
 	@GetMapping("/aboutus")

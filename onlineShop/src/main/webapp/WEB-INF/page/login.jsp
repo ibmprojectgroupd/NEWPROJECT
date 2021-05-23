@@ -15,7 +15,7 @@
         }
 
         @media ( min-width: 992px) .col-md-4 {
-            margin-left: 330px;
+            margin-left: 700px;
         }
     </style>
 </head>
@@ -34,30 +34,24 @@
                 <c:if test="${not empty logout}">
                     <div class="error" style="color: #ff0000;">${logout}</div>
                 </c:if>
-
-                <form name="loginForm"
-                      action="<c:url value="/login"/>" method="post">
+                
+                <form name="loginForm"  action="<c:url value="/login"/>" method="post">
                     <fieldset>
                         <div class="form-group">
-                            <input class="form-control" placeholder="E-mail"
-                                   name="username" type="email">
+                            <input class="form-control" placeholder="E-mail" name="username" type="email">
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder="Password"
-                                   name="password" type="password">
+                            <input class="form-control" placeholder="Password"  name="password" type="password">
                         </div>
                         <div class="checkbox">
                             <c:if test="${not empty error}">
                                 <div class="error" style="color: #ff0000">${error}</div>
                             </c:if>
                         </div>
-                        <!-- Change this to a button or input when using this as a form -->
+                       
                         <div id="button">
-                            <button type="submit" class="btn btn-sm btn-success"
-                                    style="margin-right: 79px; margin-left: 60px">Login
-                            </button>
-                            <a href="<c:url value="/customer/registration"/>"
-                               class="btn btn-sm btn-success">Register</a>
+                            <button type="submit" class="btn btn-sm btn-success" style="margin-right: 79px; margin-left: 60px">Login </button>
+                            <a href="<c:url value="/customer/registration"/>" class="btn btn-sm btn-success">Register</a>
                         </div>
                     </fieldset>
                 </form>
